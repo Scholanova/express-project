@@ -1,15 +1,16 @@
 {
   "name": "express-jour1",
-  "version": "1.0.0",
-  "description": "Un server express 🧐",
+  "version": "0.0.0",
+  "private": true,
   "scripts": {
-    "start": "node app/main",
-    "test": "echo testé",
-    "greetings": "node scripts/greetings"
+    "start": "node ./bin/www"
   },
-  "author": "",
-  "license": "ISC",
   "dependencies": {
-    "express": "^4.17.1"
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "ejs": "~2.6.1",
+    "express": "~4.16.1",
+    "http-errors": "~1.6.3",
+    "morgan": "~1.9.1"
   }
 }

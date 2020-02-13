@@ -1,0 +1,15 @@
+{
+  "name": "express-jour1",
+  "version": "1.0.0",
+  "description": "Un server express 🧐",
+  "scripts": {
+    "start": "node app/main",
+    "test": "echo testé",
+    "greetings": "node scripts/greetings"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}

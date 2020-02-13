@@ -1,0 +1,16 @@
+{
+  "name": "npm-test",
+  "version": "1.0.0",
+  "description": "server express",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"testé\"",
+    "greetings": "node helloWorld",
+    "start": "node app/main"
+  },
+  "author": "Nicolas",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}

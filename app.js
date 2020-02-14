@@ -8,6 +8,8 @@ var indexRouter = require('./routes/index')
 var usersRouter = require('./routes/users')
 var calculusRouter = require('./routes/calculus')
 
+const { NotEvenResultError } = require('./errors')
+
 var app = express()
 
 // view engine setup
@@ -39,6 +41,12 @@ app.use(function (err, req, res, next) {
   if (err.status != 404) { return next(err) }
 
   res.redirect('/404')
+})
+app.use(function (err, req, res, next) {
+  if (err instanceof NotEvenResultError) {
+    return res.render('errors/not-even-result', {message: err.message})
+  }
+  next(error)
 })
 
 // error handler

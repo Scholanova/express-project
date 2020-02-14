@@ -7,6 +7,7 @@ var logger = require('morgan')
 var indexRouter = require('./routes/index')
 var usersRouter = require('./routes/users')
 var calculusRouter = require('./routes/calculus')
+var dogsRouter = require('./routes/dogs')
 
 const { NotEvenResultError } = require('./errors')
 
@@ -25,6 +26,7 @@ app.use(express.static(path.join(__dirname, 'public')))
 app.use('/', indexRouter)
 app.use('/users', usersRouter)
 app.use('/calculus', calculusRouter)
+app.use('/dogs', dogsRouter)
 
 app.get('/404', function (req, res, next) {
   res.status(404)

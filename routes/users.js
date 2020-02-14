@@ -5,7 +5,7 @@ var router = express.Router();
 var myLogger = function (req, res, next) {
   console.log(req.query.nb);
   if (req.query.nb > 100) {
-    var err = {};
+    var err = { 'message' : 'out of range' };
   }
   next(err);
 };
@@ -18,7 +18,7 @@ router.get('/', function(req, res, next) {
 });
 
 function errorNotification (err, req, res, next) {
-  res.status(500).send('trop de people');
+  res.status(500).render('errors/internalError' , { message: err.message, error: err });
 }
 
 router.use(errorNotification)

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <p>Welcome to <%= title %></p>
+    <form action="/calcul/result" method="post">
+        <div>
+            <label for="var1">var1 :</label>
+            <input type="number" id="var1" name="var1">
+        </div>
+        <div>
+            <label for="var2">var2 :</label>
+            <input type="number" id="var2" name="var2">
+        </div>
+        <div class="button">
+            <button type="submit">calcul moi ça</button>
+        </div>
+    </form>
+  </body>
+</html>

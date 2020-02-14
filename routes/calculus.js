@@ -18,7 +18,6 @@ router.post('/', function (req, res, next) {
   next()
 })
 
-
 router.post('/', function (req, res, next) {
   calculusService.sum(req.body['First operand'], req.body['Second operand'])
     .then((result) => {
